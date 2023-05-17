@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guernsey Audio Visual Conversions</title>
     <!--Style -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> 
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js" ></script> 
 
@@ -26,6 +28,7 @@
         </div>
     </header>
     <main>
+        <video muted autoplay playsinline loop src="trimmed.mp4"></video>
         <img class="noise" src="visual-png/noise.png" alt="Noise">
         <div class="wrapper">
             <div class="main-left">
@@ -49,7 +52,7 @@
     <section class="clicker-section" >
         <div class="wrapper">
             <div class="clicker-section-top">
-                <img src="visual-png/film-strip.png" alt="Old Images on A Roll Of Film">
+                <img class="film" src="visual-png/film-strip.png" alt="Old Images on A Roll Of Film">
             </div>
             <div class="clicker-section-titles">
                 <div class="titles">
@@ -60,9 +63,19 @@
             </div>
             <div class="clicker-section-bottom">
                 <div class="clicker-section-bottom-left">
-                    <img src="visual-png/jc-gellidon-qGbo4o77NaM-unsplash 1.png" alt="VHS TAPE">
+                    <div class="clicker-container" id="woo">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 2.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 3.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 4.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 5.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 6.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 7.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 8.png" alt="VHS TAPE">
+                        <img src="clicker-images/jc-gellidon-qGbo4o77NaM-unsplash 9.png" alt="VHS TAPE">
+                    </div>
                 </div>
                 <div class="clicker-section-bottom-right">
+                    
                     <ul>
                         <li>
                             <p>VHS-C</p>
@@ -129,7 +142,7 @@
             </div>
         </div>
     </section>
-    <section class="gallery-section" >
+    <section class="gallery-section">
         <div class="wrapper">
             <div class="gallery-titles">
                 <h2>Why Choose Us?</h2>
@@ -137,17 +150,19 @@
             <div class="gallery-middle">
                 <p>Step into the future and bring your old home movies and photos with you</p>
             </div>
+            <img class="filmed absolute" src="visual-png/filmoverlay.png" alt="Preforations">
+
             <div class="gallery-grid">
                 <div class="gallery-grid-item">
-                    <img src="visual-png/scratched-image-1.png" alt="Scratched Old Photograph">
+                    <img class="grid-image" src="visual-png/scratched-image-1.png" alt="Scratched Old Photograph">
                     <p>We use the latest, top of the range tools to convert a huge range of audio/visual formats. </p>
                 </div>
                 <div class="gallery-grid-item">
-                    <img src="visual-png/scratched-image-2.png" alt="Scratched Old Photograph">
+                    <img class="grid-image-two" src="visual-png/scratched-image-2.png" alt="Scratched Old Photograph">
                     <p>We use the latest, top of the range tools to convert a huge range of audio/visual formats. </p>
                 </div>
                 <div class="gallery-grid-item">
-                    <img src="visual-png/scratched-image-3.png" alt="Scratched Old Photograph">
+                    <img class="grid-image-three" src="visual-png/scratched-image-3.png" alt="Scratched Old Photograph">
                     <p>We use the latest, top of the range tools to convert a huge range of audio/visual formats. </p>
                 </div>
             </div>
@@ -156,11 +171,15 @@
     <section class="testimonials-section contact-section">
         <div class="wrapper">
             <div class="testimonials-titles">
-                <h2>Testimonials</h2>
+                <h2>Contact Information</h2>
             </div>
             <div class="testimonials-middle">
                 <p>We use the latest, top of the range tools to convert a huge range of audio/visual formats. 
                 </p>
+                <button class="button-hollow pink">
+                    GET IN TOUCH
+                    <span><img src="visual-svg/pinkmesage.svg" alt="Send Message Icon"></span>
+                </button>
             </div>
             <div class="testimonials-bottom">
                 <div class="testimonials-bottom-left">
