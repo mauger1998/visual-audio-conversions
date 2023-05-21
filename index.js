@@ -2,30 +2,6 @@ document.querySelector('video').playbackRate = 0.9;
 
 gsap.registerPlugin(ScrollTrigger);
 
-const listItems = document.querySelectorAll(".clicker-section-bottom ul li p")
-const images = document.querySelectorAll(".clicker-section-bottom-left img")
-console.log(listItems)
-
-listItems.forEach((item, index) => {
-    item.addEventListener("mouseenter", () => {
-        item.classList.add("active")
-        console.log("h")
-        images[index].classList.add("imageActive")  
-              
-    })
-})
-
-listItems.forEach((item, index) => {
-    item.addEventListener("mouseleave", (e) => {
-        item.classList.remove("active")
-        images[index].classList.remove("imageActive")
-    })
-
-})
-
-
-
-
 const filmImage = document.querySelector(".film")
 
 gsap.to(".film", {
@@ -35,7 +11,7 @@ gsap.to(".film", {
       end: "+=1200", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
-    x:-600,
+    x:-800,
   });
 
 
@@ -46,7 +22,7 @@ gsap.to(".grid-image", {
     scrollTrigger: {
       trigger: ".grid-image",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=900", // end after scrolling 500px beyond the start
+      end: "+=700", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },
@@ -57,7 +33,7 @@ gsap.to(".grid-image", {
     scrollTrigger: {
       trigger: ".grid-image-two",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=900", // end after scrolling 500px beyond the start
+      end: "+=700", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },
@@ -68,10 +44,49 @@ gsap.to(".grid-image", {
     scrollTrigger: {
       trigger: ".grid-image-three",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=900", // end after scrolling 500px beyond the start
+      end: "+=700", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },
     y:0,
     opacity:1,
   });
+
+
+// Vertical Slider 
+
+const track = document.querySelector(".track")
+const slides = Array.from(track.children)
+const nextButton = document.querySelector(".next")
+const prevButton = document.querySelector(".prev")
+
+const slideHeight = slides[0].getBoundingClientRect().height
+
+const setSlidePosition = (slide, index) => {
+  slide.style.top = slideHeight * index + "px"
+}
+
+slides.forEach(setSlidePosition)
+
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  console.log(track)
+  track.style.transform = `translateY(-${targetSlide.style.top})`
+  currentSlide.classList.remove("currentSlide")
+  targetSlide.classList.add("currentSlide")
+}
+
+nextButton.addEventListener("click", (e) => {
+  const currentSlide = track.querySelector(".currentSlide")
+  const nextSlide = currentSlide.nextElementSibling
+  console.log(nextSlide)
+
+  moveToSlide(track, currentSlide, nextSlide)
+})
+
+prevButton.addEventListener("click", (e) => {
+  const currentSlide = track.querySelector(".currentSlide")
+  const prevSlide = currentSlide.previousElementSibling
+
+  moveToSlide(track, currentSlide, prevSlide)
+})

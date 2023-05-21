@@ -102,13 +102,20 @@ body {
     align-items: center;
     justify-content: flex-start;
 }
-nav img {
-    width:50px;
-}
+
 nav {
     display:flex;
     align-items: center;
     justify-content: flex-end;
+}
+nav ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+nav ul li {
+    font-size:var(--text);
+    font-weight:700;
 }
 button img {
     width:10px;
@@ -245,9 +252,11 @@ main {
 /* Clicker */
 
 .clicker-section {
-    background-color:white;
+    background-color:var(--pink);
     color:black;
     position:relative;
+    overflow:hidden;
+
 
 }
 .clicker-section .wrapper {
@@ -255,15 +264,19 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap:4rem;
-    overflow:hidden;
+    padding-top:0 !important;
 
+}
+.clicker-section button {
+    background-color:inherit;
+    border:2px solid var(--pink);
 }
 .clicker-section-top {
     width:100%;
     
 }
 .clicker-section-top img {
-    width:150%;
+    width:300%;
     transform:translateX(-10%);
     opacity:1 !important;
 }
@@ -321,7 +334,7 @@ main {
 
 .clicker-section-bottom-right li p {
     font-size:var(--list-item);
-    color:lightgray;
+    color:rgb(62, 62, 62);
     font-weight:300;
     z-index:0000
 }
@@ -508,11 +521,36 @@ main {
 .testimonials-bottom-right {
     width:50%;
     padding:2rem;
+    gap:2.3rem;
+    height:325px;
+    overflow-y: hidden;
+    position:relative;
+    
+
+}
+.track {
+    gap:4rem;
+    height:max-content;
+    transition:500ms;
+    position:relative;
+
+}
+.testimonials-review {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:2.3rem;
+    gap:2rem;
+    transition:500ms;
+    position:absolute;
+    inset:0;
+    height:300px;
 }
+.next,
+.prev {
+    cursor:pointer;
+}
+
+
 .contact-list {
     display:flex;
     flex-direction: column;
