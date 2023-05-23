@@ -60,7 +60,7 @@ ul {
 }
 a {
     text-decoration:none;
-    color:black;
+    color:white;
 }
 
 header,
@@ -278,12 +278,12 @@ h1 span {
 
 /* Testimonials */
 
-.testimonials-section {
-    background-image: linear-gradient(to left, #0E0A0B, #0E0A0B00 60%), linear-gradient(to bottom, #0E0A0B, #0E0A0B00 60%), linear-gradient(to top, #0E0A0B, #0E0A0B00 60%), url(visual-png/old-film-camera.png);
-    background-size:cover;
-}
+
 .contact-section {
     background-image: linear-gradient(to right, #0E0A0B, #0E0A0B00 70%), linear-gradient(to bottom, #0E0A0B, #0E0A0B00 70%), linear-gradient(to top, #0E0A0B, #0E0A0B00 70%), url(visual-png/old-film-camera-light.png);
+    background-image: url(visual-png/old-film-camera-light.png);
+    background-color:var(--black);
+    background-blend-mode: overlay;
     background-size:cover;
 }
 .testimonials-section .wrapper {
@@ -835,8 +835,8 @@ video {
     gap:2rem;
 }
 .review-card {
-    background-color:#FFFFFF30;
-    backdrop-filter: blur(10px);
+    background-color:#FFFFFF45;
+    backdrop-filter: blur(5px);
     padding:2rem 1rem;
     display:flex;
     flex-direction: column;
