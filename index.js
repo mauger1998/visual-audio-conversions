@@ -13,8 +13,18 @@ gsap.to(".film", {
     },
     x:-800,
   });
+gsap.to(".second-slide:nth-child(1)", {
+    scrollTrigger: {
+      trigger: ".second-slide:nth-child(1)",
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500", // end after scrolling 500px beyond the start
+    },
+    y:0,
+    opacity:1,
+  });
 
 
+  // Film Gallery Images
 const gridImages = document.querySelectorAll(".gallery-grid-item img")
 
 
@@ -52,71 +62,20 @@ gsap.to(".grid-image", {
     opacity:1,
   });
 
-
-// Vertical Slider 
-
-const track = document.querySelector(".track")
-const slides = Array.from(track.children)
-const nextButton = document.querySelector(".next")
-const prevButton = document.querySelector(".prev")
-
-const trackTwo = document.querySelector(".track-two")
-const slidesTwo = Array.from(trackTwo.children)
-
-const secondSlideHeight = slidesTwo[0].getBoundingClientRect().height
-
-const setSecondSlidePosition = (secondSlide, index) => {
-  secondSlide.style.top = secondSlideHeight * index + "px"
-}
-
-slidesTwo.forEach(setSecondSlidePosition)
+// Clicker Slider 
 
 
-const slideHeight = slides[0].getBoundingClientRect().height
+const clickerTrack = document.querySelector(".clicker-content")
+const clickerSlides = Array.from(clickerTrack.children)
+
+const iconButtons = document.querySelectorAll(".icon-container img")
 
 
 
-const setSlidePosition = (slide, index) => {
-  slide.style.top = slideHeight * index + "px"
-}
-
-
-slides.forEach(setSlidePosition)
-
-
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = `translateY(-${targetSlide.style.top})`
-  currentSlide.classList.remove("currentSlide")
-  targetSlide.classList.add("currentSlide")
-
-}
-const moveToSecondSlide = (trackTwo, currentSecondSlide, targetSecondSlide) => {
-  trackTwo.style.transform = `translateY(-${targetSecondSlide.style.top})`
-  currentSecondSlide.classList.remove("currentSecondSlide")
-  targetSecondSlide.classList.add("currentSecondSlide")
-}
-
-nextButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".currentSlide")
-  const currentSecondSlide = trackTwo.querySelector(".currentSecondSlide")
-  const nextSlide = currentSlide.nextElementSibling
-  const secondNextSlide = currentSecondSlide.nextElementSibling
-
-
-  moveToSlide(track, currentSlide, nextSlide)
-  moveToSecondSlide(trackTwo, currentSecondSlide, secondNextSlide)
+iconButtons.forEach((icon, index) => {
+  icon.addEventListener("click", (e) => {
+    const currentClickerSlide = document.querySelector(".current-click")
+    currentClickerSlide.classList.remove("current-click")
+    clickerSlides[index].classList.add("current-click")
+  })
 })
-
-prevButton.addEventListener("click", (e) => {
-  const currentSlide = track.querySelector(".currentSlide")
-  const prevSlide = currentSlide.previousElementSibling
-  const currentSecondSlide = trackTwo.querySelector(".currentSecondSlide")
-  const secondPrevSlide = currentSecondSlide.previousElementSibling
-
-  moveToSlide(track, currentSlide, prevSlide)
-  moveToSecondSlide(trackTwo, currentSecondSlide, secondPrevSlide)
-})
-
-
-
