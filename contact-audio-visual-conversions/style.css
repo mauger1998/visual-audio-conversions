@@ -1,16 +1,16 @@
 :root {
-    --black:#0E0A0B;
+    --black:#030303;
     --pink:#B94A95;
-    --heading-one:90px;
-    --mobile-heading-one:75px;
+    --heading-one:75px;
+    --mobile-heading-one:50px;
     --text:20px;
     --mobile-text:18px;
     --vertical-text:14px;
     --mobile-vertical-text:10px;
     --list-item:35px;
     --mobile-list-item:25px;
-    --heading-two:60px;
-    --mobile-heading-two:50px;
+    --heading-two:50px;
+    --mobile-heading-two:30px;
 }
 *,
 *::before,
@@ -19,6 +19,23 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Darker Grotesque', sans-serif;
+    font-family:"Adieu";
+
+}
+h2 {
+    text-transform: uppercase;
+    line-height:1.2 !important;
+}
+h1 {
+    line-height:1.1 !important;
+}
+p,
+label,
+li,
+button,
+a {
+    font-family: 'Darker Grotesque', sans-serif;
+
 }
 
 .button-solid {
@@ -80,6 +97,24 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.noise {
+    position:absolute;
+    mix-blend-mode: overlay;
+    mix-blend-mode:soft-light;
+
+    z-index:-1;
+    width:100%;
+    object-fit:cover;
+    height:100%;
+}
+.noisetwo {
+    mix-blend-mode:soft-light;
+    opacity:0.7;
+}
+.noisethree {
+    opacity:0.3;
+
+}
 
 .wrapper {
     width:100%;
@@ -92,7 +127,9 @@ body {
 }
 
 /* Header */
-
+header {
+    position:fixed;
+}
 .header-wrapper {
     width:100%;
     max-width:1440px;
@@ -255,10 +292,12 @@ p {
 /* More Main */
 
 main {
-    background-image:url(../contact-images/contact-background.png);
+    background-image:linear-gradient(to left, #030303, #03030300 ), url(../contact-images/contact-background.png);
     background-repeat:no-repeat;
     background-color:var(--black);
-    background-blend-mode: overlay;
+    /* background-blend-mode:difference; */
+    z-index:-2;
+    position: relative;
 }
 
 main .wrapper {
@@ -266,11 +305,12 @@ main .wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap:2rem;
+    padding-top:10rem;
 }
 .main-top {
     display:flex;
     align-items: center;
-    gap:0rem;
+    gap:2rem;
 }
 .main-top-right,
 .main-top-left {
@@ -301,9 +341,78 @@ label {
 input,
 textarea {
     width:100%;
-    background-color:#FFFFFF45;
-    backdrop-filter: blur(5px);
+    background-color:transparent;
     border:none;
-    padding:0.5rem 0.25rem;
+    border-bottom:2px solid white;
+    padding:0.75rem 0.25rem;
+}
 
+input:focus,
+textarea:focus {
+    outline:2px solid white;
+    border-bottom:none;
+}
+
+@media (max-width:1246px) {
+    main .wrapper {
+        padding-top:12rem;
+    }
+
+    .main-top {
+        flex-direction: column;
+        gap:6rem;
+    }
+    .main-top-left,
+    .main-top-right {
+        width:100%;
+    }
+    .testimonials-bottom {
+        flex-direction: column-reverse;
+    }
+    .testimonials-bottom-left {
+        position:relative;
+        width:100%;
+    }
+    .testimonials-bottom-right {
+        width:100%;
+        padding-inline:1rem;
+    }
+    .testimonials-bottom-right > p {
+        max-width:100% !important;
+        width:100%;
+    }
+    .testimonials-bottom-left img {
+        width:100%;
+        position:static;
+
+    }
+}
+@media (max-width:700px) {
+    main .wrapper {
+        padding-inline:2rem;
+    }
+    main {
+        background-image:linear-gradient(to left, #030303, #03030300 60% ), url(../contact-images/contact-background.png);
+
+    }
+    .testimonials-bottom-right > p {
+        font-size:22px !important;
+    }
+    .contact-list-item p {
+        font-size:var(--mobile-text);
+    }
+    .contact-list-item:nth-child(3) img {
+        width:15px;
+    }
+    .testimonials-bottom-right {
+        height:auto;
+    }
+    .main-top-left p {
+        font-size:50px;
+    }
+}
+@media (max-width:500px) {
+    main .wrapper {
+        padding-inline:1rem;
+    }
 }
