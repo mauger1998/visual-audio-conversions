@@ -12,6 +12,10 @@
     --heading-two:50px;
     --mobile-heading-two:30px;
 }
+@font-face {
+    font-family: customFont;
+    src: url(../Adieu-Regular.ttf);
+}
 *,
 *::before,
 *::after {
@@ -19,7 +23,7 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Darker Grotesque', sans-serif;
-    font-family:"Adieu";
+    font-family:customFont;
 
 }
 h2 {
@@ -330,7 +334,7 @@ main .wrapper {
 .main-top-left p {
     font-size:var(--heading-two);
     line-height:1 !important;
-    font-family:"adieu";
+    font-family:customFont;
 }
 .main-top-right form {
     display:flex;
