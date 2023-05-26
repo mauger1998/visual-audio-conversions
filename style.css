@@ -104,6 +104,7 @@ header {
     position:fixed;
     background-color:#0E0A0B50;
     backdrop-filter:blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index:10;
 }
 
@@ -309,7 +310,10 @@ h1 span {
     /* background-blend-mode: overlay; */
     background-size:cover;
     position:relative;
-    z-index:-2;
+    z-index:0;
+}
+.contact-section a {
+    color:black;
 }
 .testimonials-section .wrapper {
     display:flex;
@@ -339,7 +343,6 @@ h1 span {
     align-items: flex-end;
     justify-content: center;
     width:50%;
-    height:400px;
 }
 .contact-section .testimonials-middle {
     align-self:flex-end;
@@ -354,6 +357,8 @@ h1 span {
     color:black;
     display:flex;
     justify-content: flex-end;
+    /* padding-bottom:2rem; */
+    height:max-content;
 }
 
 .testimonials-section .testimonials-bottom {
@@ -364,7 +369,6 @@ h1 span {
     width:50%;
     padding:2rem;
     gap:2.3rem;
-    height:325px;
     overflow-y: hidden;
     position:relative;
     z-index:10000 !important;
@@ -379,6 +383,7 @@ h1 span {
     flex-direction: column;
     align-items: flex-start;
     gap:2rem;
+    margin-top:2rem;
 }
 .contact-list-item:nth-child(3) img {
     width:16px;
@@ -403,7 +408,7 @@ h1 span {
 .contact-section .testimonials-bottom-right > p {
     font-size:30px;
     max-width:25ch;
-    line-height:1.2;
+    line-height:1;
 }
 .contact-section button {
     align-self:flex-start;
@@ -867,7 +872,7 @@ video {
     background-image:linear-gradient(to left, #030303, #03030300 ),linear-gradient(to right, #030303, #03030300 ),url(visual-png/girlblend.png);
     background-size:cover;
     background-repeat:no-repeat;
-    z-index:-2;
+    z-index:0;
     position:relative;
 }
 
@@ -888,7 +893,8 @@ video {
 }
 .review-card {
     background-color:#FFFFFF45;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding:2rem 1rem;
     display:flex;
     flex-direction: column;
@@ -1020,4 +1026,9 @@ video {
     .joe-section .wrapper {
         padding-inline:1rem;
     }
+}
+
+button,
+a {
+    cursor:pointer;
 }

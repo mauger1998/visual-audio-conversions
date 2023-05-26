@@ -125,10 +125,14 @@ body {
     background-color:var(--black);
     color:white;
 }
+.bottom a {
+    color:black !important;
+}
 
 /* Header */
 header {
     position:fixed;
+    z-index:10;
 }
 .header-wrapper {
     width:100%;
@@ -137,7 +141,6 @@ header {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid white;;
 }
 .menu {
     display:none;
@@ -292,14 +295,18 @@ p {
 /* More Main */
 
 main {
-    background-image:linear-gradient(to left, #030303, #03030300 ), url(../contact-images/contact-background.png);
+    background-image:linear-gradient(to left, #030303, #03030300 ),linear-gradient(to right, #030303, #03030300 ), linear-gradient(to top, #030303, #03030300 10% ), url(../contact-images/contact-background.png);
     background-repeat:no-repeat;
     background-color:var(--black);
+    background-size:cover;
     /* background-blend-mode:difference; */
-    z-index:-2;
+    z-index:0;
     position: relative;
 }
 
+span {
+    color:var(--pink);
+}
 main .wrapper {
     display:flex;
     flex-direction: column;
@@ -316,9 +323,14 @@ main .wrapper {
 .main-top-left {
     width:50%;
 }
+.main-top-left {
+    align-self:flex-start;
+    margin-top:8rem;
+}
 .main-top-left p {
     font-size:var(--heading-two);
     line-height:1 !important;
+    font-family:"adieu";
 }
 .main-top-right form {
     display:flex;
@@ -384,16 +396,18 @@ textarea:focus {
     .testimonials-bottom-left img {
         width:100%;
         position:static;
-
     }
 }
 @media (max-width:700px) {
     main .wrapper {
         padding-inline:2rem;
+        padding-top:6rem;
     }
     main {
         background-image:linear-gradient(to left, #030303, #03030300 60% ), url(../contact-images/contact-background.png);
-
+    }
+    .main-top-left > p {
+        font-size:40px !important;
     }
     .testimonials-bottom-right > p {
         font-size:22px !important;
@@ -410,9 +424,15 @@ textarea:focus {
     .main-top-left p {
         font-size:50px;
     }
+    .bottom .wrapper {
+        padding-inline:2rem;
+    }
 }
 @media (max-width:500px) {
     main .wrapper {
+        padding-inline:1rem;
+    }
+    .bottom .wrapper {
         padding-inline:1rem;
     }
 }

@@ -1,0 +1,212 @@
+:root {
+    --black:#030303;
+    --pink:#B94A95;
+    --heading-one:60px;
+    --mobile-heading-one:40px;
+    --text:20px;
+    --mobile-text:18px;
+    --vertical-text:14px;
+    --mobile-vertical-text:10px;
+    --list-item:35px;
+    --mobile-list-item:25px;
+    --heading-two:50px;
+    --mobile-heading-two:30px;
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-family:"Adieu";
+}
+
+.button-solid {
+    background-color:white;
+    border:2px solid white;
+    color:black;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    padding:0.5rem 1rem;
+    font-weight:700;
+}
+.button-hollow {
+    background-color:transparent;
+    border:none;
+    color:white;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    padding:0.5rem 1rem;
+    font-weight:700;
+}
+button span {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    cursor:pointer;
+    transition:500ms;
+}
+button:hover img {
+    scale:1.25;
+    transition:500ms;
+}
+
+ul {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:white;
+}
+p,
+button,
+a,
+li {
+    font-family: 'Darker Grotesque', sans-serif;
+
+}
+
+header,
+main,
+section,
+footer {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width:100%;
+    max-width:1440px;
+    padding: 6rem 4rem;
+}
+body {
+    background-color:var(--black);
+    color:white;
+}
+h2 {
+    text-transform: uppercase;
+    line-height:1.2 !important;
+}
+h1 {
+    line-height:1.1 !important;
+}
+span {
+    color:var(--pink);
+}
+
+/* Header */
+
+header {
+    position:fixed;
+    background-color:#0E0A0B50;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index:10;
+}
+
+.header-wrapper {
+    width:100%;
+    max-width:1440px;
+    padding:2rem 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display:none;
+    width:50px;
+}
+.header-logo img {
+    width:250px;
+}
+.header-logo {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+nav ul li {
+    font-size:var(--text);
+    font-weight:700;
+}
+button img {
+    width:10px;
+}
+button {
+    font-size:22px;
+}
+h1 {
+    font-size:var(--heading-one);
+    line-height:0.9;
+    font-weight:500;
+}
+p {
+    font-size:var(--text);
+}
+@media (max-width:1000px) {
+    .menu {
+        display:block;
+    }
+    nav {
+        display:none;
+    }
+}
+@media (max-width:700px) {
+    .header-wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:500px) {
+    .header-wrapper {
+        padding-inline:1rem;
+    }
+    .header-logo img {
+        width:200px;
+    }
+    nav img {
+        width:40px;
+    }
+}
+
+/* main */
+
+main {
+    background-image: linear-gradient(to left, #030303, #03030300), linear-gradient(to top, #030303, #03030300 10%), url(../visual-png/HOWITWORKS-BG.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+main .wrapper {
+    padding-block:14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+main h1 {
+    font-size:var(--heading-one);
+    text-align:center;
+    max-width:20ch;
+}
+main p {
+    max-width:80ch;
+    text-align:center;
+    font-weight:400;
+}
