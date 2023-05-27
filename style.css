@@ -720,7 +720,8 @@ video {
 }
 .top-bar {
     position:absolute;
-    background-color:#e9e7e7ac;
+    background-color:#ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -730,12 +731,22 @@ video {
     padding:1rem 4rem;
     top:1rem;
     width:91.2%;
-    z-index:10;
+    z-index:9;
 }
+
+.highlight {
+    border-bottom:4px solid var(--pink) !important;
+    transition:500ms;
+}
+
 .top-bar img {
     cursor:pointer;
     width:50px;
+    transition:500ms;
+    padding-block:0.5rem;
+    transition:500ms;
 }
+
 .top-bar .icon-container:nth-of-type(9) img {
     width:30px !important;
 }
@@ -756,6 +767,7 @@ video {
 .current-click {
     opacity:1;
 }
+
 .clicker-price-card {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display:flex;
