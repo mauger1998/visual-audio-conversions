@@ -319,7 +319,7 @@ h1 span {
 
 
 .contact-section {
-    background-image: linear-gradient(to left, #030303, #03030300 ),url(visual-png/old-film-camera-light.png);
+    background-image: linear-gradient(to left, #030303, #03030300 ), linear-gradient(to bottom, #030303, #03030300 75% ), url(visual-png/old-film-camera-light.png);
     background-color:var(--black);
     /* background-blend-mode: overlay; */
     background-size:cover;
@@ -424,8 +424,8 @@ h1 span {
     max-width:25ch;
     line-height:1;
 }
-.contact-section button {
-    align-self:flex-start;
+.contact-section a {
+    align-self:flex-start !important;
 }
 .testimonials-bottom-left {
     position: relative;
@@ -836,19 +836,21 @@ video {
     background-color:var(--pink);
     padding:0.5rem 2rem;
 }
-.arrows img {
+
+.arrow {
+    position:absolute;
+    top:37.5%;
+    transform:translateY(-50%);
+    z-index:10;
+    display:none;
     width:60px;
     cursor:pointer;
 }
-.arrows {
-    position:absolute;
-    top:30%;
-    right:8%;
-    display:flex;
-    align-items: center;
-    gap:2rem;
-    z-index:10;
-    display:none;
+.nextArrow {
+    right:0;
+}
+.prevArrow {
+    left:0;
 }
 
 .pagination {
@@ -881,8 +883,8 @@ video {
      .top-bar {
        display:none;
     } 
-   .arrows {
-    display:flex;
+   .arrow {
+    display:block;
    }
     .clicker-absolute {
         flex-direction: column;
@@ -913,6 +915,10 @@ video {
     }
     .newone {
         display:block;
+    }
+    .pagination {
+        left:50%;
+        transform:translateX(-50%)
     }
 }
 @media (max-width:1063px) {

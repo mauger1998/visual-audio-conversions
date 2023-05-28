@@ -111,9 +111,9 @@ const clickerTrack = document.querySelector(".clicker-content")
 const clickerSlides = Array.from(clickerTrack.children)
 
 const iconButtons = document.querySelectorAll(".icon-container img")
+const prevArrow = document.querySelector(".prevArrow")
 
-const nextArrow = document.querySelector(".arrows img:nth-child(2)")
-const prevArrow = document.querySelector(".arrows img:nth-child(1)")
+const nextArrow = document.querySelector(".nextArrow")
 
 const paginationTrack = document.querySelector(".pagination")
 const paginationButtons = Array.from(paginationTrack.children)
