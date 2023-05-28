@@ -192,7 +192,7 @@ p {
 /* main */
 
 main {
-    background-image: linear-gradient(to left, #030303, #03030300), url(../visual-png/HOWITWORKS-BG.png);
+    background-image: linear-gradient(to left, #030303, #03030300), linear-gradient(to top, #030303, #03030300 10%), url(../visual-png/HOWITWORKS-BG.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -234,8 +234,8 @@ main p {
 /** How it works */
 
 .how-it-works-section {
-    background-color:white;
-    color:black;
+    background-color:var(--black);
+    color:white;
     width:100%;
 }
 .how-it-works-section .wrapper {
@@ -250,7 +250,7 @@ main p {
     font-size:var(--heading-two);
 }
 .how-it-works-titles {
-    border-block:2px solid black;
+    border-block:2px solid white;
     width:100%;
     padding-block:1rem;
 }
@@ -272,8 +272,8 @@ main p {
     font-weight:900;
     line-height:0.75;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    color:transparent;
+    -webkit-text-stroke-color: white;
+    color:white;
 }
 .right-top {
     display:flex;
