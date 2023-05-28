@@ -115,6 +115,9 @@ const iconButtons = document.querySelectorAll(".icon-container img")
 const nextArrow = document.querySelector(".arrows img:nth-child(2)")
 const prevArrow = document.querySelector(".arrows img:nth-child(1)")
 
+const paginationTrack = document.querySelector(".pagination")
+const paginationButtons = Array.from(paginationTrack.children)
+
 
 
 
@@ -147,7 +150,20 @@ prevArrow.addEventListener("click", (e) => {
 })
 
 
+paginationButtons.forEach((button, index) => {
+  button.addEventListener("click", (e) => {
+    const currentClickerSlide = document.querySelector(".current-click")
+    currentClickerSlide.classList.remove("current-click")
+    clickerSlides[index].classList.add("current-click")
 
+    paginationButtons.forEach((button) => {
+      if (button.classList.contains("highlighted")) {
+        button.classList.remove("highlighted")
+      }
+    })
+   paginationButtons[index].classList.add("highlighted")
+  })
+})
 
 iconButtons.forEach((icon, index) => {
   icon.addEventListener("click", (e) => {

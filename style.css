@@ -265,11 +265,14 @@ h1 span {
         padding-top:14rem;
     }
     .main-right-buttons button {
-        width:75%;
+        width:100%;
         justify-content: space-between;
         line-height:1;
         text-align:left;
         padding-block:1rem;
+    }
+    .main-right-buttons a {
+        width:85%;
     }
     .main-right-buttons {
         flex-direction: column;
@@ -296,11 +299,18 @@ h1 span {
         justify-content: space-between;
         line-height:1;
         text-align:left;
-    }   
+     
+}
+.main-right-buttons  a {
+    width:100%;
+}
 }
 @media (max-width:350px) {
     h1 {
-        font-size:55px;
+        font-size:40px;
+    }
+    .main-right-buttons button {
+        font-size:18px;
     }
 }
 /* Clicker */
@@ -843,12 +853,18 @@ video {
 
 .pagination {
     position:absolute;
-    top:110%;
-    width:100%;
+    bottom:7%;
+    width:max-content;
     display:flex;
     align-items: center;
     justify-content: center;
     gap:1rem;
+    z-index:11;
+    left:25%;
+    transform:translateX(-45%);
+}
+.clicker-content {
+    position:relative;
 }
 .pagination button {
     width:1rem;
@@ -857,9 +873,10 @@ video {
     border:none;
     background-color:rgba(0, 0, 0, 0.345); 
 }
-.pagination button .active {
-    background-color:black'
+.pagination .highlighted {
+    background-color:black !important;
 }
+
 @media (max-width:1246px) {
      .top-bar {
        display:none;
@@ -892,10 +909,20 @@ video {
     }
 
     .clicker-section .wrapper {
-        min-height:1000px;
+        min-height:1350px;
     }
     .newone {
         display:block;
+    }
+}
+@media (max-width:1063px) {
+    .clicker-section .wrapper {
+        min-height:1250px;
+    }
+}
+@media (max-width:805px) {
+    .clicker-section .wrapper {
+        min-height:1100px;
     }
 }
 @media (max-width:700px) {
@@ -908,15 +935,23 @@ video {
     .clicker-right p {
         font-size:var(--mobile-text);
     }
-    /* .clicker-section .wrapper {
-        height:700px;
-    } */
+   
+}
+@media (max-width:589px) {
+    .clicker-section .wrapper {
+        min-height:975px;
+    }
 }
 @media (max-width:500px) {
     .clicker-section .wrapper {
         padding-inline:1rem;
     }
    
+}
+@media (max-width:403px) {
+    .clicker-section .wrapper {
+        min-height:1000px;
+    }
 }
 /* New Testimonials */
 

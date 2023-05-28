@@ -214,3 +214,19 @@ main p {
     text-align:center;
     font-weight:400;
 }
+@media (max-width:700px) {
+    main .wrapper {
+        padding-inline:2rem;
+    }
+    main h1 {
+        font-size:var(--mobile-heading-one);
+    }
+}
+@media (max-width:500px) {
+    main .wrapper {
+        padding-inline:1rem;
+    }
+    main h1 {
+        font-size:var(--mobile-heading-one);
+    }
+}
