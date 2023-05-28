@@ -337,6 +337,9 @@ main p {
     .right-top {
         gap:2rem;
     }
+    .number p {
+        font-size:200px ;
+    }
 }
 @media (max-width:500px) {
     .how-it-works-section .wrapper {
@@ -353,6 +356,7 @@ main p {
     .right-bottom p {
         font-size:var(--mobile-text) !important;
     }
+    
 }
 
 /* CTA */
