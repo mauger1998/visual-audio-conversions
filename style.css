@@ -553,13 +553,14 @@ h1 span {
     gap:32rem;
 }
 .gallery-grid-item p {
-    font-size:55px;
+    font-size:45px;
     line-height:1;
     position:absolute;
+    font-family:customFont;
     z-index:1;
     bottom:2rem;
     left:2rem;
-    max-width:25ch;
+    max-width:15ch;
 }
 .gallery-grid-item {
     position:relative;
@@ -1126,4 +1127,8 @@ video {
 button,
 a {
     cursor:pointer;
+}
+
+span {
+    color:var(--pink)
 }
