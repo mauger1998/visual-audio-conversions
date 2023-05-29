@@ -95,7 +95,6 @@ body {
     color:white;
 }
 h2 {
-    text-transform: uppercase;
     line-height:1.2 !important;
 }
 h1 {
@@ -359,6 +358,8 @@ main p {
     
 }
 
+
+
 /* CTA */
 
 .cta-section .wrapper {
@@ -369,7 +370,7 @@ main p {
 }
 .cta-section h2 {
     line-height:1;
-    max-width:15ch;
+    max-width:20ch;
     font-size:var(--heading-two);
     text-align:center;
 }

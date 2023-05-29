@@ -119,23 +119,7 @@ const paginationTrack = document.querySelector(".pagination")
 const paginationButtons = Array.from(paginationTrack.children)
 
 
-setInterval(function () {
-  const currentClickerSlide = document.querySelector(".current-click")
-  const currentIcon = document.querySelector(".highlight")
-  const currentButton = document.querySelector(".highlighted")
-  
 
-  if (currentClickerSlide.nextElementSibling != null) {
-    currentClickerSlide.classList.remove("current-click")
-    currentClickerSlide.nextElementSibling.classList.add("current-click")
-    currentIcon.classList.remove("highlight")
-    currentIcon.parentElement.nextElementSibling.firstElementChild.classList.add("highlight")
-    currentButton.classList.remove("highlighted")
-    currentButton.nextElementSibling.classList.add("highlighted")
-  } 
-
-
-}, 6000); 
 
 
 nextArrow.addEventListener("click", (e) => {
