@@ -1,5 +1,22 @@
 document.querySelector('video').playbackRate = 0.9;
 
+document.addEventListener("click", (e) => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
+  let currentDropdown
+  if (isDropdownButton) {
+      currentDropdown = e.target.closest("[data-dropdown]")
+      currentDropdown.classList.toggle("active")
+  }
+
+  document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+      if (dropdown === currentDropdown) return
+      dropdown.classList.remove("active")
+  })
+})
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 // const filmImage = document.querySelector(".film")
@@ -128,6 +145,10 @@ nextArrow.addEventListener("click", (e) => {
   if (currentClickerSlide.nextElementSibling != null) {
     currentClickerSlide.classList.remove("current-click")
     currentClickerSlide.nextElementSibling.classList.add("current-click")
+    
+    const currentButton = document.querySelector(".highlighted")
+    currentButton.classList.remove("highlighted")
+    currentButton.nextElementSibling.classList.add("highlighted")
   } else {
     return
   }
@@ -144,6 +165,10 @@ prevArrow.addEventListener("click", (e) => {
   } else {
     currentClickerSlide.classList.remove("current-click")
     currentClickerSlide.previousElementSibling.classList.add("current-click")
+    
+
+
+   
   }
   
 })
