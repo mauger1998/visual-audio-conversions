@@ -84,7 +84,7 @@ if (window.matchMedia("(max-width:699px)").matches) {
     scrollTrigger: {
       trigger: ".grid-image",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      end: "+=200", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },
@@ -95,7 +95,7 @@ if (window.matchMedia("(max-width:699px)").matches) {
     scrollTrigger: {
       trigger: ".grid-image-two",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      end: "+=200", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },
@@ -106,7 +106,7 @@ if (window.matchMedia("(max-width:699px)").matches) {
     scrollTrigger: {
       trigger: ".grid-image-three",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      end: "+=200", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
       stagger:true,
     },

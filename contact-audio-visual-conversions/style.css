@@ -534,3 +534,40 @@ textarea:focus {
         padding-inline:1rem;
     }
 }
+/* Animations */
+.main-top-left span {
+    animation: pink-slide 1000ms forwards ease;
+    transform:translateY(-4rem);
+    opacity:0;
+    
+
+}
+.notspan {
+    transform: translateY(0rem) translateX(4rem);
+    display:block;
+    position:static;
+    animation: white-slide 1200ms forwards ease;
+    opacity:0;
+    color:white;
+}
+
+
+
+@keyframes pink-slide {
+    100% {
+        transform:translateY(0rem);
+        opacity:1;
+        
+    }
+}
+@keyframes white-slide {
+    100% {
+        transform:translateX(0rem);
+        opacity:1;
+        
+    }
+}
+
+
+
+

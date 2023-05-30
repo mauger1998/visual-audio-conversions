@@ -488,3 +488,34 @@ main p {
     }
    
 }
+/* Animations */
+
+h1 span {
+    transform:translateY(4rem);
+    display:block;
+    position:static;
+    animation: pink-slide 1200ms forwards ease;
+    opacity:0;
+}
+.notspan {
+    color:white;
+    animation:white-slide 1000ms forwards ease;
+    transform:translateY(0rem) translateX(-4rem);
+    opacity:0;
+
+}
+
+@keyframes pink-slide {
+    100% {
+        transform:translateY(0rem);
+        opacity:1;
+        
+    }
+}
+@keyframes white-slide {
+    100% {
+        transform:translateX(0rem);
+        opacity:1;
+        
+    }
+}
