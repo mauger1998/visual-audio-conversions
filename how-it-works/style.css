@@ -202,11 +202,12 @@ span {
 /* Header */
 
 header {
-    position:fixed;
     background-color:#0E0A0B50;
     backdrop-filter:blur(5px);
     -webkit-backdrop-filter: blur(5px);
     z-index:10;
+    position:relative;
+
 }
 
 .header-wrapper {
@@ -292,7 +293,7 @@ main {
     background-position:center;
 }
 main .wrapper {
-    padding-block:14rem;
+    padding-block:8rem;
     display: flex;
     flex-direction: column;
     align-items: center;

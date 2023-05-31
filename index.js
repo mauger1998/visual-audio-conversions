@@ -200,10 +200,6 @@ prevArrow.addEventListener("click", (e) => {
   } else {
     currentClickerSlide.classList.remove("current-click")
     currentClickerSlide.previousElementSibling.classList.add("current-click")
-    
-
-
-   
   }
   
 })

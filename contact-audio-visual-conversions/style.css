@@ -229,8 +229,12 @@ body {
 
 /* Header */
 header {
-    position:fixed;
+    background-color:#0E0A0B50;
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index:10;
+    position:relative;
+
 }
 .header-wrapper {
     width:100%;
@@ -410,7 +414,7 @@ main .wrapper {
     flex-direction: column;
     align-items: flex-start;
     gap:2rem;
-    padding-top:10rem;
+    padding-top:6rem;
 }
 .main-top {
     display:flex;
@@ -455,6 +459,8 @@ textarea {
     border:none;
     border-bottom:2px solid white;
     padding:0.75rem 0.25rem;
+    color:white !important;
+    font-size:20px;
 }
 
 input:focus,
@@ -465,7 +471,7 @@ textarea:focus {
 
 @media (max-width:1246px) {
     main .wrapper {
-        padding-top:12rem;
+        padding-top:4rem;
     }
 
     .main-top {
@@ -499,7 +505,7 @@ textarea:focus {
 @media (max-width:700px) {
     main .wrapper {
         padding-inline:2rem;
-        padding-top:6rem;
+        padding-top:2rem;
     }
     main {
         background-image:linear-gradient(to left, #030303, #03030300 60% ), url(../contact-images/contact-background.png);
