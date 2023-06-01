@@ -508,6 +508,7 @@ h1 span {
 .testimonials-bottom {
     background-color:#ffffff50;
     backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width:50%;
     color:white;
     display:flex;
