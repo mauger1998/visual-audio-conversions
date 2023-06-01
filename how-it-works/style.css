@@ -294,6 +294,7 @@ main {
 }
 main .wrapper {
     padding-block:8rem;
+    padding-bottom:12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -467,6 +468,7 @@ main p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-block:18rem;
 }
 .cta-section h2 {
     line-height:1;
