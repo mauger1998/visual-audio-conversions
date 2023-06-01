@@ -153,8 +153,14 @@ h1 {
 }
 p {
     font-size: var(--text);
-    max-width:80ch;
+    max-width:60ch;
     text-align:center;
+}
+.container {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    gap:0rem;
 }
 button {
     background-color:var(--pink);
@@ -204,3 +210,4 @@ button {
         font-size:50px;
     }
 }
+
