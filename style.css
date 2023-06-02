@@ -169,7 +169,7 @@ h1 {
 .dropdown > a {
     font-weight:300 !important;
 }
-@media (max-width:1250px) {
+@media (max-width:1000px) {
     nav ul {
         display:none;
     }
