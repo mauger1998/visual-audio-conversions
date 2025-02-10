@@ -354,6 +354,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+    ali
 }
 .contact-section .testimonials-bottom-right {
     gap: 4rem !important;
@@ -407,6 +408,7 @@ main {
     position: relative;
 }
 
+
 span {
     color: var(--pink);
 }
@@ -420,7 +422,9 @@ main .wrapper {
 .main-top {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
+
+
 }
 .main-top-right,
 .main-top-left {
@@ -428,7 +432,7 @@ main .wrapper {
 }
 .main-top-left {
     align-self: flex-start;
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
 }
 .main-top-left p {
     font-size: var(--heading-two);
@@ -509,8 +513,8 @@ textarea:focus {
         padding-top: 2rem;
     }
     main {
-        background-image: linear-gradient(to left, #030303, #03030300 60%),
-            url(../contact-images/contact-background.png);
+        background-image: linear-gradient( #030303ca, #030303ca 100%),
+            url(../contact-images/contact-background.png) !important;
     }
     .main-top-left > p {
         font-size: 40px !important;
